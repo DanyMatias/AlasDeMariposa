@@ -1,0 +1,154 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Fibromialgia: Entendiendo el Dolor Invisible',
+  ignoreTitleTemplate: true,
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        text: 'Más información',
+        href: '/homes/startup',
+      },
+    ]}
+    image={{ src: '~/assets/images/woman.jpg', alt: 'woman' }}
+  >
+    <Fragment slot="title">
+      Fibromialgia: <span class="hidden xl:inline">Entendiendo el dolor invisible</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Una enfermedad crónica</span> que afecta a mujeres de entre 20 y 50 años la cual causa
+        dolor en todo el cuerpo, fatiga y otros síntomas. No tiene cura, pero los tratamientos pueden aliviar los síntomas.
+        No se conocen sus causas exactas, se cree que está relacionada con una mayor sensibilidad del sistema nervioso al
+        dolor.
+      </span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <p style={{ marginBottom: '20px' }}>
+        Esta plataforma fue desarrollada en base a un estudio a pacientes con este padecimiento en <strong
+          >Más información</strong
+        > conoce los detalles y el proceso detrás del estudio.
+      </p>
+    </Fragment>
+  </Hero>
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    tagline="En México"
+    title="La prevalencia es de 4.8%"
+    subtitle="Se estima que a nivel mundial afecta al 2.5% de la población"
+    items={[
+      {
+        title: 'En México, 8 de cada 10 pacientes son mujeres',
+        description: 'Las mujeres tienen el doble de probabilidades de tener fibromialgia que los hombres.',
+        icon: 'tabler:woman',
+      },
+      {
+        title: '3 de cada 100 personas la padecen a nivel mundial ',
+        description: 'La prevalencia también puede variar según la región geográfica y los criterios de diagnóstico.',
+        icon: 'tabler:world',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features>
+
+  <FAQs
+    id="features"
+    title="Preguntas frecuentes"
+    subtitle="Estas preguntas reflejan la preocupación de los pacientes por entender y manejar su condición, buscando alivio y apoyo para mejorar su calidad de vida"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Qué causa la fibromialgia?',
+        description:
+          'Muchas personas quieren saber si hay factores genéticos, ambientales o psicológicos que la desencadenan.',
+      },
+      {
+        title: '¿Es una condición progresiva o empeorará con el tiempo?',
+        description:
+          'Los pacientes a menudo se preocupan por si los síntomas empeorarán o si la condición llevará a una discapacidad.',
+      },
+      {
+        title: '¿Cómo se puede controlar la fibromialgia y el dolor crónico más allá de usar fármacos?',
+        description: 'En muchos casos, más allá de los fármacos es fundamental el apoyo psicológico.',
+      },
+      {
+        title: '¿Cómo afecta la fibromialgia la calidad de vida?',
+        description:
+          'Puede impactar su vida diaria, incluyendo el trabajo, las relaciones y las actividades cotidianas.',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    tagline="De acuerdo a investigaciones"
+    title="Descubre como mejorar tu calidad de vida"
+    items={[
+      {
+        title: 'Abordaje integral',
+        description:
+          'Un enfoque multidisciplinario que incluye cambios en el estilo de vida, terapias físicas y apoyo emocional es clave para el manejo de la fibromialgia.',
+        icon: 'tabler:heart-spark',
+      },
+      {
+        title: 'Tratamiento personalizado',
+        description:
+          'Cada persona puede necesitar un enfoque diferente, combinando medicamentos, ejercicio, técnicas de relajación y apoyo psicológico para controlar los síntomas.',
+        icon: 'tabler:clover',
+      },
+      {
+        title: 'Una condición compleja y difícil de diagnosticar',
+        description:
+          'A menudo, la fibromialgia es mal diagnosticada porque sus síntomas son variados y pueden parecerse a los de otras enfermedades. Esto hace que sea difícil identificarla correctamente.',
+        icon: 'tabler:bandage',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/doctor.jpg',
+      alt: 'doctor',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Cuidado centrado en el paciente
+      </h3>
+      La fibromialgia suele diagnosticarse de manera tardía, lo que puede retrasar el inicio del tratamiento adecuado.
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+  <BlogLatestPosts title="Encuentra más contenido aquí" />
+  <!-- FAQs Widget ******************* -->
+  <> </>
+</Layout>

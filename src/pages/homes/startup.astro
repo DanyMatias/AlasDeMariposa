@@ -1,0 +1,306 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Brands from '~/components/widgets/Brands.astro';
+
+import { YouTube } from 'astro-embed';
+
+const metadata = {
+  title: 'Información sobre el estudio',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <!-- 
+  <Hero
+    tagline="Un proyecto realizado por parte del Instituto Tecnológico Superior de Teziutlán"
+    
+   
+  >
+    -->
+  <!-- 
+    <Fragment slot="title">
+      Con el objetivo de  <span class="hidden sm:inline">the online presence of</span> your <span
+        class="text-accent dark:text-white highlight">Startup</span
+      > with Astrowind templates
+    </Fragment>
+  -->
+  <!-- 
+    <Fragment slot="subtitle">
+      Step into the spotlight with <span class="font-semibold">Astrowind</span> templates, your pathway to fortifying your
+      startup's digital footprint, fostering credibility, and expanding your reach.
+    </Fragment>
+  -->
+
+  <!--
+    <Fragment slot="image">
+      <YouTube id="gxBkghlglTg" title="Astro just Launched.... Could it be the ultimate web framework?" />
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Hero>
+ -->
+  <!-- Features2 Widget ************** -->
+  <!-- 
+  <Features2
+    title="About us"
+    subtitle="We believe in the magic of turning dreams into stunning realities. Founded by passionate developers with a shared vision, we set out to simplify the website creation process. Our templates bring together the innovation of Astro 4.0 and the versatility of Tailwind CSS, enabling you to express your unique brand identity like never before."
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+-->
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Con el objetivo de proporcionar una plataforma a profesionales de la salud para dar mejor seguimiento a las necesidades y el bienestar de los pacientes"
+    subtitle="El análisis se centró en extraer aspectos relacionados con síntomas, tratamientos, emociones, medicamentos que utilizan y más aspectos, con el fin de proporcionar una base para la toma de decisiones médicas. La fuente de datos fueron comentarios extraídos de YouTube."
+    stats={[
+      { title: 'Videos', amount: '45' },
+      { title: 'Comentarios', amount: '19K' },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Stats>
+
+  <!-- Brands Widget ****************** -->
+
+  <Brands
+    title="Herramientas utilizadas para procesar los datos"
+    subtitle="Se utilizó Jupyter Notebook, empleando el lenguaje de programación Python para la implementación de los algoritmos de análisis de sentimientos y procesamiento del lenguaje natural. Estas herramientas permitieron la extracción, clasificación y visualización de datos obtenidos de miles de comentarios."
+    icons={[]}
+    images={[
+      {
+        src: 'https://miro.medium.com/v2/resize:fit:828/1*WfGojwXVuUR-is6gQRTLJQ.png',
+        alt: 'Jupyter',
+      },
+
+      {
+        src: 'https://cdn.pixabay.com/photo/2015/04/13/17/45/icon-720944_1280.png',
+        alt: 'Youtube',
+      },
+
+           
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Una investigación de tipo aplicada y mixta"
+    subtitle="El método de recolección de datos fue mediante grupos de discusión virtuales, documentos, registros, estudios de caso y observación. A los comentarios recopilados se aplicaron criterios de exclusión para evitar comentarios fuera de tema o irrelevantes y criterios de inclusión para comentarios que incluyan información útil para el análisis. "
+    items={[
+      {
+        title: 'Análisis de datos cualitativo',
+        description:
+          'Utilizado al interpretar las emociones expresadas (positivas, negativas, neutras), para temas extraídos de los comentarios de pacientes y en la visualización de datos ya que se utilizan gráficas y estadísticas descriptivas para mostrar los resultados más predominantes.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Análisis de datos cuantitativo',
+        description:
+          'Para la interpretación de temas subyacentes en las publicaciones de los pacientes, buscando patrones y tendencias en las experiencias compartidas.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Almacenamiento de datos',
+        description:
+          'Todos los comentarios recopilados de los 45 videos de YouTube fueron organizados y guardados en un archivo de formato .csv (un archivo excel), el cual es ampliamente utilizado para almacenar datos estructurados. Este archivo .csv contiene toda la información necesaria para el análisis.',
+        icon: 'tabler:file',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- Features Widget *************** -->
+
+   
+  <Features
+    id="features"
+    title="Resultados obtenidos"
+    subtitle="La información presentada proporciona fines informativos. No sustituye el consejo médico profesional. Los datos presentados se basan en investigaciones y se ofrecen como complemento a la atención médica. La fibromialgia es una condición compleja que requiere una evaluación médica exhaustiva. La información proporcionada en esta sección no debe utilizarse como único recurso para tomar decisiones sobre su salud. Consulte siempre a su médico para obtener un diagnóstico y tratamiento adecuados."
+    columns={2}
+    items={[
+      {
+        title: 'Comorbilidades asociadas, perspectiva de una investigación',
+        description:
+          'Se recopiló información sobre su experiencia y malestar, reveló las comorbilidades más comunes que enfrentan los pacientes.',
+        icon: 'tabler:mood-puzzled',
+      },
+      {
+        title: '¿El ejercicio puede mejorar los síntomas de esta enfermedad?',
+        description: 'Cada ejercicio es de acuerdo a cada paciente, no todos presentan los síntomas de la misma manera.',
+        icon: 'tabler:stretching',
+      },
+      {
+        title: 'Emociones más frecuentes',
+        description:
+          'De acuerdo a investigaciones las emociones negativas pueden intensificar la experiencia del dolor en pacientes con fibromialgia.',
+        icon: 'tabler:mood-look-down',
+      },
+      {
+        title: '¿La alimentación influye en el tratamiento?',
+        description: 'Mantener una alimentación saludable de acuerdo a especialistas y nutriólogos puede ayudar a aliviar síntomas.',
+        icon: 'tabler:apple',
+      },
+      {
+        title: 'Tratamientos frecuentes para combatir la FM',
+        description:
+          'La efectividad varía según la enfermedad o afección específica que presente cada persona, así como sus necesidades particulares..',
+        icon: 'tabler:bandage',
+      },
+      {
+        title: 'Medicamentos más comúnes para el control del dolor de acuerdo a un estudio',
+        description: 'Los resultados que se muestran únicamente son de los comentarios obtenidos. Todos los medicamentos deben ser administrados por un especialista.',
+        icon: 'tabler:stethoscope',
+      },
+      {
+        title: 'Síntomas más comunes de acuerdo a pacientes',
+        description: 'Los síntomas en los pacientes con fibromialgia pueden variar en intensidad y frecuencia, pero algunos de los más comunes es el dolor.',
+        icon: 'tabler:bed',
+      },
+    ]}
+  />
+ 
+  
+
+
+
+
+
+
+
+
+
+  <!-- FAQs Widget ******************* -->
+  <!-- 
+  <FAQs
+    title="Frequently Asked Questions"
+    items={[
+      {
+        title: 'What are landing page templates?',
+        description:
+          'Landing page templates are pre-designed web page layouts that are specifically created to serve as a foundation for building effective landing pages. These templates are designed to capture the attention of visitors and guide them towards a specific action or goal, such as signing up for a newsletter, making a purchase, or downloading a resource.',
+      },
+      {
+        title: 'Why should I use a template?',
+        description:
+          'Some of the advantages are that they provide a ready-to-use structure,  saving you significant time. Are designed with user-friendliness in mind and provide a cost-effective alternative, saving you money while still delivering a quality result.',
+      },
+      {
+        title: 'Can I preview templates before buying?',
+        description:
+          'Yes, the templates allow you to preview them before making a purchase. There is a "Demo" button associated with each template.',
+      },
+      {
+        title: 'Do I need technical skills to use a template?',
+        description:
+          'Advanced technical skills are not required to use a template, but having a basic understanding of web navigation and familiarity with using online tools can still be beneficial. If you have more specific customization needs, you might need to consult guides or reach out to customer support for assistance.',
+      },
+      {
+        title: 'Can I use the template on multiple websites?',
+        description:
+          'No, the template comes with a single-use license, meaning you can use the template on one website or project only. Using the template on additional websites would require purchasing additional licenses.',
+      },
+      {
+        title: 'What if I need help with customization?',
+        description:
+          "The templates provides a comprehensive step-by-step guide that walk you through the customization process. If you still have doubts, you can reach out to our customer support team. They can answer your questions, provide guidance on customization, and address any issues you're facing.",
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+  -->
+
+  <!-- Features3 Widget ************** -->
+  <!-- 
+  <Features3
+    title="Let us know how we can help"
+    subtitle="We’re here to help and answer any question you might have."
+    columns={4}
+    items={[
+      {
+        title: 'Phone',
+        icon: 'tabler:phone',
+        callToAction: {
+          target: '_blank',
+          text: 'Call us',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Email',
+        icon: 'tabler:mail',
+        callToAction: {
+          target: '_blank',
+          text: 'Write to us',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Chat with sales',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Start chatting',
+          href: '/',
+          variant: 'link',
+        },
+      },
+      {
+        title: 'Chat with support',
+        icon: 'tabler:message-circle',
+        callToAction: {
+          target: '_blank',
+          text: 'Start chatting',
+          href: '/',
+          variant: 'link',
+        },
+      },
+    ]}
+  />-->
+
+  <!-- CallToAction Widget *********** -->
+  <!-- 
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        target: '_blank',
+        text: 'Get templates',
+        href: 'https://github.com/onwidget/astrowind',
+        icon: 'tabler:download',
+      },
+    ]}
+  >
+    <Fragment slot="title">Obtén una visión completa de la información recabada</Fragment>
+
+    <Fragment slot="subtitle">
+      Puedes encontrar los 
+    </Fragment>
+  </CallToAction>-->
+</Layout>
